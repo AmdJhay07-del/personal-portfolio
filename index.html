@@ -2,25 +2,130 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta
-      name="description"
-      content="Portfolio of Jerome Armandico, an aspiring web developer focused on creating practical, responsive, and user-friendly digital experiences."
-    />
+    <!-- =====================================================
+         BASIC SEO
+    ====================================================== -->
 
     <title>Jerome Armandico | Aspiring Web Developer</title>
 
+    <meta
+      name="description"
+      content="Portfolio of Jerome Armandico, an aspiring web developer building responsive, interactive, and user-friendly websites with HTML, CSS, and JavaScript."
+    />
+
+    <meta name="author" content="Jerome Armandico" />
+
+    <meta
+      name="keywords"
+      content="Jerome Armandico, web developer, aspiring web developer, frontend developer, HTML, CSS, JavaScript, portfolio, Philippines"
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <meta name="theme-color" content="#070b12" />
+
+    <link
+      rel="canonical"
+      href="https://amdjhay07-del.github.io/personal-portfolio/"
+    />
+
+    <!-- =====================================================
+         FAVICON
+         JA monogram using portfolio colors
+    ====================================================== -->
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23070b12'/%3E%3Ctext x='50' y='65' text-anchor='middle' font-size='46' font-family='Arial,sans-serif' font-weight='700' fill='%235eead4'%3EJA%3C/text%3E%3C/svg%3E"
+    />
+
+    <!-- =====================================================
+         OPEN GRAPH
+         Used when sharing the portfolio on social platforms
+    ====================================================== -->
+
+    <meta
+      property="og:title"
+      content="Jerome Armandico | Aspiring Web Developer"
+    />
+
+    <meta
+      property="og:description"
+      content="A modern developer portfolio showcasing my web development journey, technical skills, projects, and continuous learning."
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta
+      property="og:url"
+      content="https://amdjhay07-del.github.io/personal-portfolio/"
+    />
+
+    <meta property="og:site_name" content="Jerome Armandico Portfolio" />
+
+    <meta property="og:locale" content="en_US" />
+
+    <!-- =====================================================
+         SOCIAL / TWITTER CARD
+    ====================================================== -->
+
+    <meta name="twitter:card" content="summary" />
+
+    <meta
+      name="twitter:title"
+      content="Jerome Armandico | Aspiring Web Developer"
+    />
+
+    <meta
+      name="twitter:description"
+      content="Aspiring web developer building responsive, interactive, and meaningful digital experiences."
+    />
+
+    <!-- =====================================================
+         STYLES
+    ====================================================== -->
+
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- =====================================================
+         STRUCTURED DATA
+    ====================================================== -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jerome Armandico",
+        "url": "https://amdjhay07-del.github.io/personal-portfolio/",
+        "sameAs": [
+          "https://github.com/AmdJhay07-del"
+        ],
+        "jobTitle": "Aspiring Web Developer",
+        "description": "Third-year student and aspiring web developer focused on building responsive, interactive, and user-friendly websites.",
+        "knowsAbout": [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "Git",
+          "GitHub",
+          "Responsive Web Design"
+        ]
+      }
+    </script>
   </head>
 
   <body>
-    <!-- =========================
+    <!-- =====================================================
          NAVIGATION
-    ========================== -->
+    ====================================================== -->
+
     <header class="header" id="header">
-      <nav class="navbar container">
-        <a href="#home" class="logo">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a href="#home" class="logo" aria-label="Jerome Armandico home">
           <span>&lt;</span>Jerome<span>/&gt;</span>
         </a>
 
@@ -37,6 +142,7 @@
           id="menuButton"
           type="button"
           aria-label="Open navigation menu"
+          aria-controls="navMenu"
           aria-expanded="false"
         >
           <span></span>
@@ -47,14 +153,15 @@
     </header>
 
     <main>
-      <!-- =========================
+      <!-- =====================================================
            HERO
-      ========================== -->
+      ====================================================== -->
+
       <section id="home" class="hero">
         <div class="container hero-grid">
           <div class="hero-content">
             <div class="availability">
-              <span class="availability-dot"></span>
+              <span class="availability-dot" aria-hidden="true"></span>
               Open to learning and opportunities
             </div>
 
@@ -73,14 +180,14 @@
             <p class="hero-description">
               I'm a third-year student passionate about web development and
               creating meaningful digital experiences. I enjoy building
-              practical, user-friendly websites designed to solve real-world
-              problems.
+              practical, responsive, and user-friendly websites designed to
+              solve real-world problems.
             </p>
 
             <div class="hero-buttons">
               <a href="#projects" class="button button-primary">
                 View My Projects
-                <span>→</span>
+                <span aria-hidden="true">→</span>
               </a>
 
               <a href="#contact" class="button button-secondary">
@@ -93,17 +200,18 @@
                 href="https://github.com/AmdJhay07-del"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit Jerome Armandico's GitHub profile"
               >
                 GitHub ↗
-              </a>
-
-              <a href="#" aria-label="LinkedIn profile">
-                LinkedIn ↗
               </a>
             </div>
           </div>
 
-          <div class="hero-visual">
+          <!-- =================================================
+               CODE WINDOW
+          ================================================== -->
+
+          <div class="hero-visual" aria-label="Developer profile code example">
             <div class="code-window">
               <div class="code-header">
                 <div class="code-dots" aria-hidden="true">
@@ -115,7 +223,7 @@
                 <p>jerome.js</p>
               </div>
 
-              <div class="code-body">
+              <div class="code-body" aria-hidden="true">
                 <p>
                   <span class="code-keyword">const</span>
                   <span class="code-variable"> developer</span> = {
@@ -175,15 +283,16 @@
           </div>
         </div>
 
-        <a href="#about" class="scroll-indicator">
+        <a href="#about" class="scroll-indicator" aria-label="Scroll to About">
           <span>Explore</span>
-          <span>↓</span>
+          <span aria-hidden="true">↓</span>
         </a>
       </section>
 
-      <!-- =========================
+      <!-- =====================================================
            ABOUT
-      ========================== -->
+      ====================================================== -->
+
       <section id="about" class="about section">
         <div class="container">
           <div class="section-header">
@@ -228,7 +337,7 @@
               </p>
             </div>
 
-            <aside class="about-details">
+            <aside class="about-details" aria-label="Quick information">
               <article class="detail-card">
                 <span>Current Focus</span>
                 <strong>Frontend Development</strong>
@@ -253,9 +362,10 @@
         </div>
       </section>
 
-      <!-- =========================
-           SKILLS
-      ========================== -->
+      <!-- =====================================================
+           TECHNICAL SKILLS
+      ====================================================== -->
+
       <section id="skills" class="skills section">
         <div class="container">
           <div class="section-header">
@@ -273,12 +383,20 @@
           </div>
 
           <div class="skills-grid">
+            <!-- HTML5 -->
+
             <article class="skill-card">
               <div class="skill-card-top">
                 <span class="skill-index">01</span>
 
-                <div class="skill-icon html-icon" aria-hidden="true">
-                  HTML
+                <div class="skill-icon html-icon">
+                  <img
+                    src="assets/icons/html5.svg"
+                    alt=""
+                    width="34"
+                    height="34"
+                    aria-hidden="true"
+                  />
                 </div>
               </div>
 
@@ -294,20 +412,28 @@
               </span>
             </article>
 
+            <!-- CSS -->
+
             <article class="skill-card">
               <div class="skill-card-top">
                 <span class="skill-index">02</span>
 
-                <div class="skill-icon css-icon" aria-hidden="true">
-                  CSS
+                <div class="skill-icon css-icon">
+                  <img
+                    src="assets/icons/css.svg"
+                    alt=""
+                    width="34"
+                    height="34"
+                    aria-hidden="true"
+                  />
                 </div>
               </div>
 
-              <h3>CSS3</h3>
+              <h3>CSS</h3>
 
               <p>
-                Styling websites and creating responsive layouts for different
-                screen sizes.
+                Styling modern interfaces and creating responsive layouts that
+                adapt smoothly across different screen sizes.
               </p>
 
               <span class="skill-status">
@@ -315,20 +441,28 @@
               </span>
             </article>
 
+            <!-- JAVASCRIPT -->
+
             <article class="skill-card">
               <div class="skill-card-top">
                 <span class="skill-index">03</span>
 
-                <div class="skill-icon js-icon" aria-hidden="true">
-                  JS
+                <div class="skill-icon js-icon">
+                  <img
+                    src="assets/icons/javascript.svg"
+                    alt=""
+                    width="34"
+                    height="34"
+                    aria-hidden="true"
+                  />
                 </div>
               </div>
 
               <h3>JavaScript</h3>
 
               <p>
-                Adding interactivity, dynamic behavior, and functionality to
-                websites.
+                Adding interactivity, dynamic behavior, and useful functionality
+                to web experiences.
               </p>
 
               <span class="skill-status">
@@ -336,20 +470,28 @@
               </span>
             </article>
 
+            <!-- GIT -->
+
             <article class="skill-card">
               <div class="skill-card-top">
                 <span class="skill-index">04</span>
 
-                <div class="skill-icon git-icon" aria-hidden="true">
-                  Git
+                <div class="skill-icon git-icon">
+                  <img
+                    src="assets/icons/git.svg"
+                    alt=""
+                    width="34"
+                    height="34"
+                    aria-hidden="true"
+                  />
                 </div>
               </div>
 
               <h3>Git & GitHub</h3>
 
               <p>
-                Managing source code, tracking changes, and working with
-                cloud-based repositories.
+                Tracking development changes, maintaining repositories, and
+                working with cloud-based development workflows.
               </p>
 
               <span class="skill-status">
@@ -357,6 +499,10 @@
               </span>
             </article>
           </div>
+
+          <!-- =================================================
+               TOOLS
+          ================================================== -->
 
           <div class="tools-section">
             <p>Tools & Workflow</p>
@@ -373,9 +519,10 @@
         </div>
       </section>
 
-      <!-- =========================
+      <!-- =====================================================
            PROJECTS
-      ========================== -->
+      ====================================================== -->
+
       <section id="projects" class="projects section">
         <div class="container">
           <div class="section-header projects-header">
@@ -395,11 +542,15 @@
               class="text-link"
             >
               View GitHub
-              <span>↗</span>
+              <span aria-hidden="true">↗</span>
             </a>
           </div>
 
           <div class="projects-grid">
+            <!-- =================================================
+                 FEATURED PROJECT
+            ================================================== -->
+
             <article class="project-card project-featured">
               <div class="project-preview">
                 <div class="project-preview-label">
@@ -409,21 +560,17 @@
 
                 <div class="portfolio-preview">
                   <div class="preview-browser">
-                    <div class="preview-browser-top">
+                    <div class="preview-browser-top" aria-hidden="true">
                       <span></span>
                       <span></span>
                       <span></span>
                     </div>
 
-                    <div class="preview-screen">
+                    <div class="preview-screen" aria-hidden="true">
                       <div class="preview-nav"></div>
-
                       <div class="preview-heading"></div>
-
                       <div class="preview-subheading"></div>
-
                       <div class="preview-copy"></div>
-
                       <div class="preview-button"></div>
                     </div>
                   </div>
@@ -436,14 +583,14 @@
                 <h3>Personal Portfolio</h3>
 
                 <p>
-                  A responsive personal portfolio designed to showcase my
-                  development journey, technical skills, projects, and future
-                  work.
+                  A responsive and interactive developer portfolio designed to
+                  showcase my development journey, technical skills, projects,
+                  and future work.
                 </p>
 
                 <div class="project-technologies">
                   <span>HTML5</span>
-                  <span>CSS3</span>
+                  <span>CSS</span>
                   <span>JavaScript</span>
                   <span>GitHub</span>
                 </div>
@@ -457,17 +604,25 @@
                     Source Code ↗
                   </a>
 
-                  <a href="#" aria-label="Live portfolio demo">
+                  <a
+                    href="https://amdjhay07-del.github.io/personal-portfolio/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Live Demo ↗
                   </a>
                 </div>
               </div>
             </article>
 
+            <!-- =================================================
+                 PROJECT 2
+            ================================================== -->
+
             <article class="project-card project-coming-soon">
               <div class="project-number">02</div>
 
-              <div class="project-placeholder">
+              <div class="project-placeholder" aria-hidden="true">
                 <span>+</span>
               </div>
 
@@ -477,8 +632,8 @@
                 <h3>Task Planner</h3>
 
                 <p>
-                  A productivity-focused web application for organizing tasks,
-                  priorities, and deadlines.
+                  A productivity-focused web application designed to help users
+                  organize tasks, priorities, deadlines, and unfinished work.
                 </p>
 
                 <div class="project-technologies">
@@ -489,10 +644,14 @@
               </div>
             </article>
 
+            <!-- =================================================
+                 PROJECT 3
+            ================================================== -->
+
             <article class="project-card project-coming-soon">
               <div class="project-number">03</div>
 
-              <div class="project-placeholder">
+              <div class="project-placeholder" aria-hidden="true">
                 <span>+</span>
               </div>
 
@@ -503,7 +662,8 @@
 
                 <p>
                   A booking experience designed to help users select services,
-                  schedules, and appointment times.
+                  schedules, and available appointment times through a clear
+                  interface.
                 </p>
 
                 <div class="project-technologies">
@@ -517,9 +677,10 @@
         </div>
       </section>
 
-      <!-- =========================
+      <!-- =====================================================
            CONTACT
-      ========================== -->
+      ====================================================== -->
+
       <section id="contact" class="contact section">
         <div class="container contact-container">
           <p class="section-number">04 / Contact</p>
@@ -535,9 +696,14 @@
             digital experiences.
           </p>
 
-          <a href="mailto:your@email.com" class="contact-email">
-            your@email.com
-            <span>↗</span>
+          <!--
+            IMPORTANT:
+            Replace this email with your professional email before final launch.
+          -->
+
+          <a href="mailto:armandicojerome07@gmail.com" class="contact-email">
+            armandicojerome07@gmail.com
+            <span aria-hidden="true">↗</span>
           </a>
 
           <div class="contact-socials">
@@ -548,18 +714,15 @@
             >
               GitHub ↗
             </a>
-
-            <a href="#">
-              LinkedIn ↗
-            </a>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- =========================
+    <!-- =====================================================
          FOOTER
-    ========================== -->
+    ====================================================== -->
+
     <footer class="footer">
       <div class="container footer-container">
         <p>
@@ -575,6 +738,10 @@
         </a>
       </div>
     </footer>
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
     <script src="js/script.js"></script>
   </body>
